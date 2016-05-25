@@ -16,6 +16,10 @@
 
   process.title = 'npm'
 
+  var setBlocking = require('set-blocking')
+  setBlocking(process.stdout)
+  setBlocking(process.stderr)
+
   var log = require('npmlog')
   log.pause() // will be unpaused when config is loaded.
 
